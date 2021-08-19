@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Gotham pro', sans-serif;
+	background: #fff;
+	color: $secondary;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	font-family: 'Gilroy', sans-serif;
+}
+
+.container {
+	width: 1400px;
+	margin: 0 auto;
+}

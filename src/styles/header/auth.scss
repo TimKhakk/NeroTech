@@ -1,0 +1,29 @@
+.auth {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	&__enter {
+		font-size: 15px;
+		font-weight: normal;
+		color: $secondary;
+	}
+
+	&__sigh-in {
+		font-size: 15px;
+		font-weight: 400;
+
+		background: $secondary;
+		color: white;
+		padding: 8px 34px;
+		border-radius: 8px;
+		transition: background 0.2s, color 0.2s, border 0s;
+
+		&:hover {
+			// border: 2px solid $secondary;
+			background: white;
+			color: $dark-blue;
+			// padding: 6px 32px;
+		}
+	}
+}

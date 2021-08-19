@@ -1,0 +1,48 @@
+.trigger {
+	.container {
+		display: grid;
+		grid-template-rows: min-content 1fr;
+		column-gap: 100px;
+		row-gap: 24px;
+	}
+	.first {
+		grid-template-columns: 7fr 4fr;
+	}
+
+	.second {
+		grid-template-columns: 4fr 7fr;
+
+		img {
+			justify-self: flex-end;
+		}
+	}
+
+	h3 {
+		font-size: 30px;
+		margin-left: 65px;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			content: '';
+			left: -65px;
+			position: absolute;
+			background: $primary;
+			width: 50px;
+			height: 6px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+	}
+
+	p {
+		font-size: 18px;
+		color: $dark-blue;
+		margin-left: 65px;
+	}
+
+	img {
+		grid-row: span 2;
+	}
+}

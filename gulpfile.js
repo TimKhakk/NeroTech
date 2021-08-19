@@ -2,8 +2,8 @@ const { src, dest, watch, series, parallel } = require('gulp');
 
 const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
-const csso = require('gulp-csso');
-const plumber = require('gulp-plumber');
+const csso = require('gulp-csso'); // delele
+const plumber = require('gulp-plumber'); // delele
 const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat'); // Объединитель. Также может переименовывать
 const sync = require('browser-sync').create();
@@ -27,14 +27,12 @@ exports.html = html;
 // Styles
 
 const styles = () =>
-	src(['src/styles/required/*scss', 'src/styles/*.scss']) // Важно! Сначала берем файлы из папки required объединяем, затем компрессуем
+	src(['src/styles/required/**/*.scss', 'src/styles/**/*.scss'])
 		.pipe(concat('index.min.css')) // Объединяет и переименовывает конечный файл
-		.pipe(plumber())
-		.pipe(sass())
-		.pipe(autoprefixer({ browsersList: 'last 2 versions' }))
-		.pipe(csso())
+		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+		// .pipe(autoprefixer({ browsersList: 'last 2 versions' }))
 		.pipe(dest('dist/styles'))
-		.pipe(sync.stream()); // Обновление страницы
+		.pipe(sync.stream());
 
 exports.styles = styles;
 

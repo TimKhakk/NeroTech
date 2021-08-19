@@ -1,0 +1,38 @@
+.menu {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		font-weight: 500;
+		font-size: 14px;
+		color: $secondary;
+		transition: 0.2s;
+		position: relative;
+
+		// &::after {
+		// 	content: '';
+		// 	display: block;
+		// 	position: absolute;
+		// 	width: 4px;
+		// 	border-radius: 1px;
+		// 	background: #e84061;
+		// 	height: 25px;
+		// 	top: 0px;
+		// 	transition: 0.2s;
+		// 	transform: translateY(-35px);
+		// }
+
+		// &:hover .menu__link::after {
+		// 	transform: translateY(-55px);
+		// }
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
