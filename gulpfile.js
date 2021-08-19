@@ -3,11 +3,13 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
+const plumber = require('gulp-plumber');
 const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat'); // Объединитель. Также может переименовывать
 const sync = require('browser-sync').create();
 
-// #region HTML
+// HTML
+
 const html = () =>
 	src('src/*.html')
 		.pipe(
@@ -17,29 +19,26 @@ const html = () =>
 			})
 		)
 		.pipe(concat('index.html'))
-		.pipe(dest('dist')) // Пункт назначения
+		.pipe(dest('dist'))
 		.pipe(sync.stream()); // Обновление страницы
 
 exports.html = html;
 
-// #endregion
-
-// #region Styles
+// Styles
 
 const styles = () =>
-	src('src/styles/**/*.scss') // Важно! Сначала объединяем, затем компрессуем
+	src(['src/styles/required/*scss', 'src/styles/*.scss']) // Важно! Сначала берем файлы из папки required объединяем, затем компрессуем
 		.pipe(concat('index.min.css')) // Объединяет и переименовывает конечный файл
+		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer({ browsersList: 'last 2 versions' }))
 		.pipe(csso())
-		.pipe(dest('dist/styles')) // Пункт назначения
+		.pipe(dest('dist/styles'))
 		.pipe(sync.stream()); // Обновление страницы
 
 exports.styles = styles;
 
-// #endregion
-
-// #region Server
+// Server
 
 const serve = () => {
 	sync.init({
@@ -52,17 +51,13 @@ const serve = () => {
 
 exports.serve = serve;
 
-// #endregion
-
-// #region Watcher
+// Watcher
 
 const watchAll = () => {
 	watch(['src/index.html', 'src/**/*.scss'], series(html, styles));
 };
 
 exports.watchAll = watchAll;
-
-// #endregion
 
 // Default
 
