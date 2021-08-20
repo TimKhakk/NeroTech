@@ -1,0 +1,31 @@
+.seventh {
+	padding: 180px 0 160px;
+	background: $light-grey;
+	position: relative;
+	z-index: 10;
+
+	img {
+		width: calc(100vw - 17px);
+		position: absolute;
+		height: 100%;
+		z-index: -999;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	.container {
+		@include grid(1fr 1fr, min-content min-content);
+		column-gap: 60px;
+		row-gap: 50px;
+	}
+
+	h2 {
+		@include font(45px, 700, White, 42px);
+		margin: 0;
+		align-self: flex-end;
+		grid-column: span 2;
+		text-align: center;
+	}
+}

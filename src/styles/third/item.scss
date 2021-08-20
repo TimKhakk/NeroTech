@@ -1,0 +1,27 @@
+.third {
+	.item {
+		@include flex(space-between, center, 0, column);
+		width: 250px;
+
+		svg {
+			margin-bottom: 50px;
+		}
+
+		span {
+			@include flex();
+
+			@include font(20px, 700, $secondary, 16px);
+
+			width: 52px;
+			height: 52px;
+			border: 2px solid $secondary;
+			border-radius: 50%;
+			margin-bottom: 22px;
+		}
+
+		p {
+			@include font(20px, 300, $dark-blue, 32px);
+			text-align: center;
+		}
+	}
+}

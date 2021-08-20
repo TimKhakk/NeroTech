@@ -1,47 +1,26 @@
 main {
 	margin-top: 10px;
-	margin-bottom: 75px;
+	margin-bottom: 73px;
 
 	.container {
 		display: grid;
-		grid-template-columns: 7fr 4fr;
+		grid-template-columns: 825px 1fr;
 		grid-template-rows: min-content 1fr min-content;
 		column-gap: 122px;
 	}
 
 	h1 {
+		@include font(55px, 700, $secondary, 60px);
 		margin-top: 24px;
-		font-weight: bold;
-		font-size: 55px;
-		color: $secondary;
 	}
 
 	p {
+		@include font(20px, 400, $dark-blue, 32px);
 		margin-top: 3px;
-		color: $dark-blue;
-		font-weight: 400;
-		font-size: 20px;
 	}
 
 	button {
 		margin-top: 30px;
-		height: max-content;
-		width: max-content;
-		font-size: 16px;
-		font-weight: 600;
-		color: white;
-		line-height: 24px;
-		background: $primary;
-		padding: 17px 25px;
-		border-radius: 8px;
-		transition: border 0s, background 0.4s, color 0.4s, padding 0s;
-
-		&:hover {
-			border: 2px solid $primary;
-			background: white;
-			color: $primary;
-			padding: 15px 23px;
-		}
 	}
 
 	img {

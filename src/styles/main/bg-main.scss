@@ -1,3 +1,17 @@
 .bg-main {
-	// background: top right no-repeat url(../images/bg-main.svg);
+	position: relative;
+	// background: top right no-repeat url(../images/bg-main-1.png);
+}
+
+body {
+	position: relative;
+}
+.bg-main-1 {
+	width: calc(100vw - 17px);
+	position: absolute;
+	z-index: -999;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 }

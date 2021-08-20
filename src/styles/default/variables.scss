@@ -1,0 +1,49 @@
+$primary: #e84061;
+$secondary: #2675d1;
+$light-blue: #30a9f2;
+$light-grey: #eef2f5;
+$sky-blue: #a1dbf1;
+$dark-blue: #3e4956;
+$alt-bg: #f7f8fa;
+
+@mixin super-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex($justify-content: center, $align-items: center, $gap: 0, $direction: row) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	gap: $gap;
+	flex-direction: $direction;
+}
+
+@mixin grid($columns: 1fr, $rows: 1fr, $gap: 0) {
+	display: grid;
+	grid-template-columns: $columns;
+	grid-template-rows: $rows;
+	gap: $gap;
+}
+
+@mixin font($size, $weight, $color, $line-height) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	line-height: $line-height;
+}
+
+@mixin h3($color: $secondary) {
+	font-size: 30px;
+	font-weight: 700;
+	color: $color;
+	line-height: 36px;
+}
+
+@mixin smallFont($color: $dark-blue) {
+	font-size: 14px;
+	font-weight: 400;
+	color: $color;
+	line-height: 22px;
+}

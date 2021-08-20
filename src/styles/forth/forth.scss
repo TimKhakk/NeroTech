@@ -1,0 +1,7 @@
+.forth {
+	margin-top: 115px;
+
+	.container {
+		@include flex(center, center, 0, column);
+	}
+}

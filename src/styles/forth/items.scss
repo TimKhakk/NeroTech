@@ -1,0 +1,21 @@
+.forth {
+	.items {
+		@include flex(space-between, center);
+		margin-bottom: 45px;
+		padding: 0 33px;
+		width: 100%;
+	}
+
+	.item {
+		@include flex(space-between, center, 0, column);
+		padding: 40px;
+		width: 380px;
+		height: 294px;
+		background: $alt-bg;
+	}
+
+	p {
+		@include font(20px, 700, $dark-blue, 24px);
+		text-align: center;
+	}
+}

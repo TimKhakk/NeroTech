@@ -1,0 +1,18 @@
+.fifth {
+	.items {
+		@include grid(1fr 1fr, 1fr 1fr);
+		column-gap: 84px;
+		row-gap: 50px;
+		margin-bottom: 45px;
+	}
+
+	.item {
+		@include grid(min-content 1fr, 36px min-content);
+		row-gap: 15px;
+		column-gap: 46px;
+
+		img {
+			grid-row: span 2;
+		}
+	}
+}

@@ -18,7 +18,7 @@
 	}
 
 	h3 {
-		font-size: 30px;
+		@include h3;
 		margin-left: 65px;
 		position: relative;
 		display: flex;

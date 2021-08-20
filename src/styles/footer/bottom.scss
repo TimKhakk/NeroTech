@@ -1,0 +1,14 @@
+footer {
+	.bottom {
+		@include grid(1fr max-content max-content, max-content, 50px);
+		padding: 16px 0;
+
+		span {
+			@include smallFont(white);
+		}
+
+		span:first-child {
+			@include font(10px, 300, white, 16px);
+		}
+	}
+}

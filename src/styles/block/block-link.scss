@@ -1,0 +1,9 @@
+.block-link {
+	@include font(16px, 400, $primary, 24px);
+	@include flex(center, center, 8px);
+
+	svg {
+		width: 18px;
+		height: 8px;
+	}
+}

@@ -1,0 +1,26 @@
+footer {
+	.item {
+		@include flex(space-between, flex-start, 0, column);
+	}
+
+	.item:first-child {
+		align-self: stretch;
+	}
+
+	h3 {
+		@include h3(white);
+		margin-bottom: 25px;
+	}
+
+	nav > ul {
+		@include flex(space-between, flex-start, 0, column);
+	}
+
+	nav > ul > li:not(:last-child) {
+		margin-bottom: 5px;
+	}
+
+	nav > ul > li > a {
+		@include smallFont(white);
+	}
+}

@@ -1,0 +1,6 @@
+footer {
+	.items {
+		@include flex(space-between, flex-start, 50px);
+		margin-bottom: 33px;
+	}
+}

@@ -20,10 +20,8 @@
 		transition: background 0.2s, color 0.2s, border 0s;
 
 		&:hover {
-			// border: 2px solid $secondary;
 			background: white;
 			color: $dark-blue;
-			// padding: 6px 32px;
 		}
 	}
 }

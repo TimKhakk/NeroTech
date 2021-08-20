@@ -1,0 +1,8 @@
+.sixth {
+	padding-top: 100px;
+	padding-bottom: 50px;
+
+	.container {
+		@include flex(center, center, 0, column);
+	}
+}

@@ -1,0 +1,17 @@
+footer {
+	#badge {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&::after {
+			@include font(10px, 300, white, 16px);
+			position: absolute;
+			content: 'Новая';
+			right: -54px;
+			background: $primary;
+			color: white;
+			padding: 3px 6px;
+		}
+	}
+}

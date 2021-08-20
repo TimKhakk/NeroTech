@@ -27,7 +27,7 @@ exports.html = html;
 // Styles
 
 const styles = () =>
-	src(['src/styles/required/**/*.scss', 'src/styles/**/*.scss'])
+	src(['src/styles/default/variables.scss', 'src/styles/**/*.scss'])
 		.pipe(concat('index.min.css')) // Объединяет и переименовывает конечный файл
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		// .pipe(autoprefixer({ browsersList: 'last 2 versions' }))
