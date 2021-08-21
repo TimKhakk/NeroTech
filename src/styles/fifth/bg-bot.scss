@@ -1,0 +1,14 @@
+.bg-bot {
+	position: relative;
+
+	.img {
+		width: calc(100vw - 17px);
+		position: absolute;
+		height: 100%;
+		z-index: -999;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+}

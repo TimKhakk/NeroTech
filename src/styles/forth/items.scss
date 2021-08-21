@@ -18,4 +18,60 @@
 		@include font(20px, 700, $dark-blue, 24px);
 		text-align: center;
 	}
+
+	img {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+// <=1400px
+@include max-screen($xxl) {
+	.forth {
+		.items {
+			@include flex(space-between, center);
+			margin-bottom: 45px;
+			padding: 0;
+			width: 100%;
+		}
+
+		.item {
+			@include flex(space-between, center, 0, column);
+			padding: 40px;
+			width: 380px;
+			height: 294px;
+			background: $alt-bg;
+		}
+
+		p {
+			@include font(20px, 700, $dark-blue, 24px);
+			text-align: center;
+		}
+	}
+}
+
+// <=1200px
+@include max-screen($xl) {
+	.forth {
+		.items {
+			@include flex(space-between, center);
+			margin-bottom: 40px;
+		}
+
+		.item {
+			@include flex(space-between, center, 0, column);
+			padding: 35px;
+			width: 310px;
+			height: 250px;
+		}
+
+		p {
+			@include h3-subtitle;
+		}
+
+		img {
+			width: 80px;
+			height: 80px;
+		}
+	}
 }

@@ -21,17 +21,17 @@
 	}
 
 	&__text {
-		@include smallFont($dark-blue);
+		@include sm-font($dark-blue);
 		grid-column: span 3;
 	}
 
 	&__name {
-		@include font(16px, 400, $secondary, 24px);
+		@include md-font($secondary);
 		align-self: center;
 	}
 
 	.rating {
 		@include flex(center, center, 2px, column);
-		@include font(14px, 400, $sky-blue, 21px);
+		@include sm-font($sky-blue);
 	}
 }

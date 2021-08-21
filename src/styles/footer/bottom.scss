@@ -4,7 +4,7 @@ footer {
 		padding: 16px 0;
 
 		span {
-			@include smallFont(white);
+			@include sm-font(white);
 		}
 
 		span:first-child {

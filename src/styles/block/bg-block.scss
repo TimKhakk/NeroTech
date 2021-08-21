@@ -1,0 +1,29 @@
+.bg-main {
+	position: relative;
+}
+.bg-block {
+	width: calc(100vw - 17px);
+	position: absolute;
+	object-fit: cover;
+	height: max-content;
+	z-index: -999;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+// <=1200px
+@include max-screen($xl) {
+	.bg-block {
+		width: 100vw;
+		position: absolute;
+		object-fit: cover;
+		height: max-content;
+		z-index: -999;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+}

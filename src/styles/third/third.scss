@@ -8,6 +8,11 @@
 		@include flex;
 		flex-direction: column;
 	}
+
+	svg {
+		width: 120px;
+		height: 120px;
+	}
 }
 
 #third-middle {
@@ -30,5 +35,18 @@
 
 	&::after {
 		left: 110px;
+	}
+}
+
+@include max-screen($xxl) {
+	.third {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+	#third-middle {
+		&::before,
+		&::after {
+			width: 200px;
+		}
 	}
 }

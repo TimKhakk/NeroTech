@@ -2,10 +2,14 @@ footer {
 	background: $dark-blue;
 	padding-top: 64px;
 
-	.container {
-	}
-
 	hr {
 		opacity: 0.2s;
+	}
+}
+
+// <=1200px
+@include max-screen($xl) {
+	footer {
+		padding-top: 27px;
 	}
 }

@@ -4,3 +4,10 @@
 	gap: 80px;
 	padding-bottom: 20px;
 }
+
+@include max-screen($xl) {
+	.triggers {
+		gap: 60px;
+		padding-bottom: 15px;
+	}
+}

@@ -7,7 +7,7 @@
 body {
 	font-family: 'Gotham pro', sans-serif;
 	background: #fff;
-	color: #2675d1;
+	color: $secondary;
 }
 
 a {
@@ -23,10 +23,15 @@ button {
 	cursor: pointer;
 	border: none;
 	background: transparent;
-	font-family: 'Gilroy', sans-serif;
 }
 
-.container {
-	width: 1400px;
-	margin: 0 auto;
+// <=1200px
+@include max-screen($xl) {
+	h2 {
+		@include font(36px, 700, $secondary, 34px);
+	}
+
+	h3 {
+		@include font(24px, 700, $secondary, 30px);
+	}
 }

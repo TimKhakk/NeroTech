@@ -1,16 +1,16 @@
 main {
 	margin-top: 10px;
-	margin-bottom: 73px;
+	margin-bottom: 80px;
 
 	.container {
 		display: grid;
 		grid-template-columns: 825px 1fr;
-		grid-template-rows: min-content 1fr min-content;
+		grid-template-rows: min-content min-content 1fr;
 		column-gap: 122px;
 	}
 
 	h1 {
-		@include font(55px, 700, $secondary, 60px);
+		@include h1;
 		margin-top: 24px;
 	}
 
@@ -25,5 +25,47 @@ main {
 
 	img {
 		grid-row: span 3;
+		width: 380px;
+		height: 386px;
+	}
+}
+
+@include max-screen($xxl) {
+	main {
+		margin-bottom: 40px;
+
+		.container {
+			grid-template-columns: 720px 1fr;
+			column-gap: 65px;
+		}
+
+		h1 {
+			font-size: 48px;
+			line-height: 52px;
+		}
+	}
+}
+
+@include max-screen($xl) {
+	main {
+		margin-bottom: 50px;
+
+		.container {
+			grid-template-columns: 600px 1fr;
+			column-gap: 0px;
+		}
+
+		h1 {
+			font-size: 36px;
+			line-height: 40px;
+		}
+
+		button {
+			margin-top: 40px;
+		}
+		p {
+			@include md-font();
+			margin-top: 30px;
+		}
 	}
 }

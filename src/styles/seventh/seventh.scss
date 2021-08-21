@@ -1,18 +1,11 @@
 .seventh {
-	padding: 180px 0 160px;
+	padding: 170px 0;
 	background: $light-grey;
 	position: relative;
 	z-index: 10;
 
 	img {
-		width: calc(100vw - 17px);
-		position: absolute;
 		height: 100%;
-		z-index: -999;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
 	}
 
 	.container {
@@ -22,10 +15,27 @@
 	}
 
 	h2 {
-		@include font(45px, 700, White, 42px);
+		@include h2(White);
 		margin: 0;
 		align-self: flex-end;
 		grid-column: span 2;
 		text-align: center;
+	}
+}
+
+// <=1200px
+@include max-screen($xl) {
+	.seventh {
+		.container {
+			column-gap: 40px;
+			row-gap: 30px;
+		}
+
+		h2 {
+			@include font(30px, 700, white, 36px);
+			align-self: flex-end;
+			grid-column: span 2;
+			text-align: center;
+		}
 	}
 }

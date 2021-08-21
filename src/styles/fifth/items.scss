@@ -7,12 +7,31 @@
 	}
 
 	.item {
-		@include grid(min-content 1fr, 36px min-content);
+		@include grid(min-content 1fr, min-content min-content);
 		row-gap: 15px;
 		column-gap: 46px;
 
 		img {
 			grid-row: span 2;
+		}
+	}
+}
+// <=1200px
+@include max-screen($xl) {
+	.fifth {
+		.items {
+			gap: 40px;
+			margin-bottom: 45px;
+		}
+
+		.item {
+			@include grid(min-content 1fr, min-content min-content);
+			row-gap: 15px;
+			column-gap: 30px;
+		}
+
+		h3 {
+			@include font(24px, 700, $secondary, 28px);
 		}
 	}
 }

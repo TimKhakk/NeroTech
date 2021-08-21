@@ -1,0 +1,11 @@
+.container {
+	width: 1400px;
+	margin: 0 auto;
+}
+
+@include max-screen($xxl) {
+	.container {
+		width: 100%;
+		padding: 0 16px;
+	}
+}

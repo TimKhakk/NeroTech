@@ -21,11 +21,10 @@
 		@include h3;
 		margin-left: 65px;
 		position: relative;
-		display: flex;
-		align-items: center;
 
 		&::before {
 			content: '';
+			top: 15px;
 			left: -65px;
 			position: absolute;
 			background: $primary;
@@ -37,12 +36,37 @@
 	}
 
 	p {
-		font-size: 18px;
-		color: $dark-blue;
+		@include h3-subtitle();
 		margin-left: 65px;
 	}
 
 	img {
 		grid-row: span 2;
+		width: 245px;
+		height: 248px;
+	}
+}
+
+// <=1200px
+@include max-screen($xl) {
+	.trigger {
+		.container {
+			column-gap: 95px;
+			row-gap: 14px;
+		}
+
+		h3 {
+			@include font(24px, 700, $secondary, 28px);
+			margin-left: 65px;
+
+			&::before {
+				top: 12px;
+			}
+		}
+
+		p {
+			@include font(16px, 400, $dark-blue, 24px);
+			margin-left: 65px;
+		}
 	}
 }
