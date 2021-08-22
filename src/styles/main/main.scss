@@ -12,6 +12,10 @@ main {
 	h1 {
 		@include h1;
 		margin-top: 24px;
+
+		span {
+			display: none;
+		}
 	}
 
 	p {
@@ -46,6 +50,7 @@ main {
 	}
 }
 
+// <=1200
 @include max-screen($xl) {
 	main {
 		margin-bottom: 50px;
@@ -63,9 +68,129 @@ main {
 		button {
 			margin-top: 40px;
 		}
+
 		p {
 			@include md-font();
 			margin-top: 30px;
+		}
+	}
+}
+
+// <=992
+@include max-screen($lg) {
+	main {
+		margin-bottom: 83px;
+
+		.container {
+			grid-template-columns: 1fr max-content;
+		}
+
+		img {
+			width: 272px;
+			height: 276px;
+			align-self: flex-end;
+		}
+
+		h1 {
+			font-size: 36px;
+			line-height: 40px;
+
+			br {
+				display: none;
+			}
+
+			span {
+				display: inline;
+			}
+		}
+
+		button {
+			margin-top: 40px;
+			margin-bottom: 15px;
+		}
+		p {
+			@include md-font();
+			margin-top: 14px;
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	main {
+		margin-top: 10px;
+		margin-bottom: 80px;
+
+		.container {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			column-gap: 122px;
+		}
+
+		h1 {
+			margin-top: 64px;
+
+			span {
+				display: none;
+			}
+		}
+
+		p {
+			margin-top: 15px;
+		}
+
+		img {
+			position: absolute;
+			width: 162px;
+			height: 164px;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	main {
+		margin-top: 0px;
+		margin-bottom: 80px;
+
+		.container {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			column-gap: 122px;
+		}
+
+		h1 {
+			margin-top: 50px;
+			@include font(30px, 700, $secondary, 32px);
+
+			br {
+				display: inline;
+			}
+		}
+
+		p {
+			margin-top: 15px;
+		}
+
+		img {
+			width: 94px;
+			height: 93px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		button {
+			margin-top: 20px;
+			margin-bottom: 0px;
 		}
 	}
 }

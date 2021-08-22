@@ -5,9 +5,16 @@
 	padding-bottom: 20px;
 }
 
+// <=1200px
 @include max-screen($xl) {
 	.triggers {
 		gap: 60px;
 		padding-bottom: 15px;
+	}
+}
+// <=768px
+@include max-screen($md) {
+	.triggers {
+		gap: 50px;
 	}
 }

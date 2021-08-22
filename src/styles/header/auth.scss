@@ -25,3 +25,10 @@
 		}
 	}
 }
+
+// <=992px
+@include max-screen($lg) {
+	.auth {
+		display: none;
+	}
+}

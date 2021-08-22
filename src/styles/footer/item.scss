@@ -33,3 +33,17 @@ footer {
 		}
 	}
 }
+
+// <=992px
+@include max-screen($lg) {
+	footer {
+		h3 {
+			margin-bottom: 15px;
+		}
+
+		.item:nth-child(1),
+		.item:nth-child(2) {
+			grid-row: span 2;
+		}
+	}
+}

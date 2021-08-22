@@ -8,11 +8,6 @@
 		@include flex;
 		flex-direction: column;
 	}
-
-	svg {
-		width: 120px;
-		height: 120px;
-	}
 }
 
 #third-middle {
@@ -48,5 +43,57 @@
 		&::after {
 			width: 200px;
 		}
+	}
+}
+
+@include max-screen($lg) {
+	.third {
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
+	#third-middle {
+		&::before,
+		&::after {
+			width: 100px;
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	#third-middle {
+		&::before,
+		&::after {
+			width: 2px;
+			height: 80px;
+		}
+
+		&::before {
+			top: -110px;
+			right: 23px;
+		}
+
+		&::after {
+			top: 78px;
+			left: 23px;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	#third-middle {
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	.third {
+		padding-top: 80px;
+		padding-bottom: 65px;
 	}
 }

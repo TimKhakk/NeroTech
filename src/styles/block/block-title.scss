@@ -2,6 +2,7 @@
 	@include flex(center, center, 8px);
 	@include h2;
 	margin-bottom: 70px;
+	text-align: center;
 }
 
 // <=1400px
@@ -17,5 +18,13 @@
 	.block-title {
 		@include font(36px, 700, $secondary, 34px);
 		margin-bottom: 50px;
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	.block-title {
+		@include font(24px, 700, $secondary, 22px);
+		margin-bottom: 30px;
 	}
 }

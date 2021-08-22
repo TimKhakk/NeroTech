@@ -24,13 +24,21 @@
 		.container {
 			@include flex(center, center, 0, column);
 		}
+	}
+}
 
-		h3 {
-			@include h3();
-		}
+// <=992px
+@include max-screen($lg) {
+	.fifth {
+		padding-top: 116px;
+	}
+}
 
-		p {
-			@include h3-subtitle();
+// <=568px
+@include max-screen($sm) {
+	.fifth {
+		.container {
+			@include flex(center, center, 0, column);
 		}
 	}
 }

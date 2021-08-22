@@ -35,3 +35,10 @@
 		transform: translateY(-55px);
 	}
 }
+
+// <=768px
+@include max-screen($md) {
+	.menu {
+		display: none;
+	}
+}

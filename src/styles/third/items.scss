@@ -16,3 +16,23 @@
 		}
 	}
 }
+
+// <=768px
+@include max-screen($md) {
+	.third {
+		.items {
+			@include flex(space-between, flex-start);
+			flex-direction: column;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	.third {
+		.items {
+			@include flex(center, center);
+			flex-direction: column;
+		}
+	}
+}

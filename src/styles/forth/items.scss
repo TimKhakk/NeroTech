@@ -75,3 +75,37 @@
 		}
 	}
 }
+
+// <=99xpx
+@include max-screen($lg) {
+	.forth {
+		.items {
+			@include flex(space-between, center);
+			margin-bottom: 40px;
+		}
+
+		.item {
+			@include flex(space-between, center, 0, column);
+			padding: 35px 5px;
+			width: 230px;
+			height: 226px;
+		}
+
+		p {
+			@include font(16px, 400, $dark-blue, 24px);
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	.forth {
+		.items {
+			flex-direction: column;
+		}
+
+		.item:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}

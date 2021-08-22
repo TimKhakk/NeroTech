@@ -6,11 +6,9 @@
 		@include flex(center, center, 0, column);
 	}
 }
-// <=1200px
-@include max-screen($xl) {
+// <=992px
+@include max-screen($lg) {
 	.sixth {
-		.items {
-			@include flex(space-between, flex-start, 15px);
-		}
+		background: $light-grey;
 	}
 }

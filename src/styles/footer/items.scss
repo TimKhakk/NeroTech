@@ -4,3 +4,34 @@ footer {
 		margin-bottom: 33px;
 	}
 }
+
+// <=992px
+@include max-screen($lg) {
+	footer {
+		.items {
+			@include grid(1fr 1fr 1fr, 1fr 1fr, 50px);
+			margin-bottom: 33px;
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	footer {
+		.items {
+			gap: 35px;
+			margin-bottom: 33px;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	footer {
+		.items {
+			@include grid(1fr 1fr, 1fr 1fr, 0px);
+			column-gap: 25px;
+			row-gap: 35px;
+		}
+	}
+}

@@ -5,6 +5,8 @@
 
 		svg {
 			margin-bottom: 50px;
+			width: 120px;
+			height: 120px;
 		}
 
 		span {
@@ -29,8 +31,7 @@
 @include max-screen($xl) {
 	.third {
 		.item {
-			@include flex(space-between, center, 0, column);
-			width: 250px;
+			width: 220px;
 
 			svg {
 				margin-bottom: 50px;
@@ -51,6 +52,66 @@
 			p {
 				@include font(18px, 300, $dark-blue, 24px);
 				text-align: center;
+			}
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	.third {
+		.item {
+			@include grid(max-content 1fr max-content);
+			width: 100%;
+
+			svg {
+				width: 132px;
+				height: 132px;
+				margin: 0;
+				margin-right: 30px;
+			}
+
+			span {
+				order: 3;
+				margin: 0;
+			}
+
+			p {
+				@include font(16px, 300, $dark-blue, 24px);
+				text-align: left;
+			}
+		}
+		.item:not(:last-child) {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	.third {
+		.item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+
+			svg {
+				margin: 0;
+				margin-bottom: 30px;
+			}
+
+			span {
+				order: 2;
+				margin: 0;
+				margin-bottom: 30px;
+			}
+
+			p {
+				@include font(16px, 300, $dark-blue, 24px);
+				text-align: center;
+				order: 3;
 			}
 		}
 	}

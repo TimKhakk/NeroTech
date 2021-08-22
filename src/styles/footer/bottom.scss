@@ -9,6 +9,71 @@ footer {
 
 		span:first-child {
 			@include font(10px, 300, white, 16px);
+
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+// <=992px
+@include max-screen($lg) {
+	footer {
+		.bottom {
+			@include grid(1fr min-content min-content, 60px, 50px);
+			align-items: center;
+
+			span {
+				width: min-content;
+			}
+			span:last-child {
+				text-align: right;
+				justify-self: flex-end;
+			}
+
+			span:first-child {
+				width: max-content;
+			}
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	footer {
+		.bottom {
+			span:first-child {
+				br {
+					display: inline;
+				}
+			}
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	footer {
+		.bottom {
+			@include flex(center, flex-start);
+			flex-direction: column;
+
+			span:first-child {
+				br {
+					display: none;
+				}
+			}
+			span {
+				width: 100%;
+			}
+			span:not(:last-child) {
+				margin-bottom: 17px;
+			}
+			span:last-child {
+				text-align: left;
+				justify-self: flex-end;
+			}
 		}
 	}
 }

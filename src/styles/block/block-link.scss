@@ -7,3 +7,17 @@
 		height: 8px;
 	}
 }
+
+// <=568px
+@include max-screen($sm) {
+	.block-link {
+		@include font(14px, 400, $primary, 18px);
+		@include flex(center, center, 8px);
+		text-align: center;
+
+		svg {
+			width: 18px;
+			height: 8px;
+		}
+	}
+}

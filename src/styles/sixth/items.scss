@@ -35,3 +35,24 @@
 		@include sm-font($sky-blue);
 	}
 }
+
+// <=1200px
+@include max-screen($xl) {
+	.sixth {
+		.items {
+			@include flex(space-between, flex-start, 15px);
+		}
+	}
+}
+
+// <=992px
+@include max-screen($lg) {
+	.sixth {
+		.items {
+			overflow: hidden;
+			@include flex(space-between, flex-start, 30px);
+			margin-bottom: 50px;
+			width: 100%;
+		}
+	}
+}

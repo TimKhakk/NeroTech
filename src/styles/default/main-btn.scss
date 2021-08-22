@@ -6,11 +6,23 @@
 	padding: 17px 25px;
 	border-radius: 8px;
 	transition: border 0s, background 0.4s, color 0.4s, padding 0s;
+}
 
-	&:hover {
-		border: 2px solid $primary;
-		background: white;
-		color: $primary;
-		padding: 15px 23px;
+// <=568px
+@include max-screen($sm) {
+	.main-btn {
+		width: 100%;
+	}
+}
+
+// >=1200px
+@include min-screen($lg) {
+	.main-btn {
+		&:hover {
+			border: 2px solid $primary;
+			background: white;
+			color: $primary;
+			padding: 15px 23px;
+		}
 	}
 }

@@ -22,3 +22,16 @@
 		}
 	}
 }
+
+// <=568px
+@include max-screen($sm) {
+	.seventh {
+		.second {
+			width: 100%;
+		}
+
+		.main-btn {
+			width: 100%;
+		}
+	}
+}

@@ -57,7 +57,6 @@
 
 		h3 {
 			@include font(24px, 700, $secondary, 28px);
-			margin-left: 65px;
 
 			&::before {
 				top: 12px;
@@ -66,7 +65,68 @@
 
 		p {
 			@include font(16px, 400, $dark-blue, 24px);
-			margin-left: 65px;
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	.trigger {
+		.container {
+			column-gap: 20px;
+			row-gap: 14px;
+		}
+
+		.first {
+			grid-template-columns: 1fr max-content;
+		}
+
+		.second {
+			grid-template-columns: max-content 1fr;
+		}
+
+		img {
+			align-self: center;
+			width: 173px;
+			height: 175px;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	.trigger {
+		.container {
+			@include flex(center, flex-start);
+			flex-direction: column;
+		}
+
+		.first {
+			h3 {
+				order: 2;
+			}
+			p {
+				order: 3;
+			}
+		}
+		h3 {
+			@include font(18px, 700, $secondary, 22px);
+			margin-bottom: 12px;
+
+			&::before {
+				top: 11px;
+			}
+		}
+
+		p {
+			@include font(14px, 400, $dark-blue, 22px);
+		}
+
+		img {
+			align-self: center;
+			width: 156px;
+			height: 157px;
+			margin-bottom: 22px;
 		}
 	}
 }

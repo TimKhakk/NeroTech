@@ -39,3 +39,38 @@
 		}
 	}
 }
+
+// <=768px
+@include max-screen($md) {
+	.seventh {
+		.container {
+			@include flex(center, center);
+			flex-direction: column;
+		}
+
+		h2 {
+			margin-bottom: 45px;
+
+			br {
+				display: none;
+			}
+		}
+
+		.main-btn {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+// <=568px
+@include max-screen($sm) {
+	.seventh {
+		h2 {
+			@include font(24px, 700, white, 22px);
+			margin-bottom: 30px;
+			br {
+				display: inline;
+			}
+		}
+	}
+}

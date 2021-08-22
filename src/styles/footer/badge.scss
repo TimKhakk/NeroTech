@@ -15,3 +15,25 @@ footer {
 		}
 	}
 }
+
+// <=992px
+@include max-screen($lg) {
+	footer {
+		#badge {
+			&::after {
+				right: 194px;
+			}
+		}
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	footer {
+		#badge {
+			&::after {
+				right: 170px;
+			}
+		}
+	}
+}
