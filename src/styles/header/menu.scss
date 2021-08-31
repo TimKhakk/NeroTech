@@ -13,26 +13,6 @@
 		color: $secondary;
 		transition: 0.2s;
 		position: relative;
-
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			width: 4px;
-			border-radius: 1px;
-			background: #e84061;
-			height: 25px;
-			top: 0px;
-			transition: 0.2s;
-			transform: translateY(-35px);
-		}
-
-		&:hover {
-			color: $primary;
-		}
-	}
-	.menu__link:hover .menu__link::before {
-		transform: translateY(-55px);
 	}
 }
 
@@ -40,5 +20,31 @@
 @include max-screen($md) {
 	.menu {
 		display: none;
+	}
+}
+
+// >=1200px
+@include min-screen($lg) {
+	.menu {
+		&__link {
+			&:hover {
+				color: $primary;
+			}
+
+			&:hover .menu__link-span {
+				transform: translateY(-35px);
+			}
+			&-span {
+				display: block;
+				position: absolute;
+				width: 4px;
+				border-radius: 2px;
+				background: #e84061;
+				height: 25px;
+				top: 0px;
+				transition: 0.2s;
+				transform: translateY(-55px);
+			}
+		}
 	}
 }

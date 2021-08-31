@@ -1,5 +1,20 @@
 .pagination {
+	display: flex;
+	align-items: center;
+	position: relative;
 	width: 80%;
-	height: 5px;
-	background: $secondary;
+	height: 2px;
+	border-radius: 6px;
+	background: $sky-blue;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 15%;
+		display: block;
+		width: 9px;
+		height: 12px;
+		border-radius: 3px;
+		background: $secondary;
+	}
 }
