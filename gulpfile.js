@@ -56,6 +56,8 @@ const watchAll = () => {
 
 exports.watchAll = watchAll;
 
+exports.build = parallel(html, styles);
+
 // Default
 
 exports.default = series(parallel(html, styles), parallel(watchAll, serve));
