@@ -29,7 +29,7 @@ const styles = () =>
 		.pipe(concat('index.min.scss')) // Объединяет и переименовывает конечный файл
 		.pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
 		.pipe(concat('index.min.css')) // Объединяет и переименовывает конечный файл
-		// .pipe(autoprefixer({ browsersList: 'last 2 versions' }))
+		.pipe(autoprefixer({ browsersList: 'last 2 versions' }))
 		.pipe(dest('dist/styles'))
 		.pipe(sync.stream());
 
